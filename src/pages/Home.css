@@ -1,51 +1,158 @@
-.home{
-    margin: 30px 70px;
+/* General Home Page Styling */
+.home {
+    padding: 5vw 10vw;
 }
 
-.header{
+/* Header Section */
+.header {
     height: 60vh;
-    /* margin: 30px 70px; */
     background-image: url("https://wallpapercave.com/wp/wp3376127.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     position: relative;
-    border-radius: 50px;
-
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.header-contens{
+/* Header Content */
+.header-contens {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 1.5vw;
+    gap: 2vw;
     max-width: 50%;
     bottom: 10%;
-    left: 6vw;
+    left: 5vw;
 }
 
-.header-contens h2{
-    font-weight: 500;
+.header-contens h2 {
+    font-weight: 600;
     color: white;
-    font-size: max(4.5vw, 22px);
+    font-size: clamp(22px, 4vw, 50px);
 }
 
-.header-contens p{
+.header-contens p {
     color: white;
-    font-size: 1vw;
+    font-size: clamp(12px, 1vw, 18px);
+    line-height: 1.5;
 }
 
-.header-contens button{
+.header-contens button {
     border: none;
     color: #747474;
     font-weight: 500;
     padding: 1vh 2.3vh;
     background-color: white;
-    font-size: max(1vw, 13px);
+    font-size: clamp(12px, 1vw, 16px);
     border-radius: 50px;
+    transition: 0.3s ease-in-out;
 }
 
-.food-card{
-    margin: 30px 70px;
+.header-contens button:hover {
+    background-color: #f8b400;
+    color: white;
 }
 
+/* Food Card Section */
+.food-card {
+    padding: 4vw 5vw;
+}
+
+.food-card h2 {
+    font-size: clamp(22px, 3vw, 40px);
+    font-weight: 600;
+    margin-bottom: 2vw;
+}
+
+/* App Download Section */
+.app-download {
+    text-align: center;
+    padding: 3vw 5vw;
+    margin-top: 5vw;
+    border-radius: 20px;
+}
+
+.app-download h3 {
+    font-size: clamp(20px, 2.5vw, 35px);
+    font-weight: 600;
+    margin-bottom: 2vw;
+}
+
+/* Store Icons */
+.app-download img {
+    width: clamp(120px, 15vw, 180px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.app-download img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home {
+        padding: 5vw;
+    }
+
+    .header {
+        height: 50vh;
+    }
+
+    .header-contens {
+        max-width: 70%;
+        bottom: 8%;
+    }
+
+    .header-contens h2 {
+        font-size: clamp(18px, 4vw, 36px);
+    }
+
+    .header-contens p {
+        font-size: clamp(10px, 1.2vw, 14px);
+    }
+
+    .header-contens button {
+        padding: 8px 16px;
+    }
+
+    .food-card {
+        padding: 6vw 5vw;
+    }
+
+    .app-download {
+        padding: 5vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 40vh;
+    }
+
+    .header-contens {
+        max-width: 80%;
+        left: 3vw;
+        bottom: 5%;
+    }
+
+    .header-contens h2 {
+        font-size: clamp(16px, 4vw, 30px);
+    }
+
+    .header-contens p {
+        font-size: clamp(10px, 1vw, 12px);
+    }
+
+    .header-contens button {
+        padding: 6px 12px;
+        font-size: clamp(10px, 1vw, 14px);
+    }
+
+    .app-download img {
+        width: clamp(100px, 12vw, 150px);
+    }
+}
