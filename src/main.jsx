@@ -7,8 +7,6 @@ import StoreContextProvider from './context/StoreContext.jsx';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 
-
-
 createRoot(document.getElementById('root')).render(
   
   <StoreContextProvider>
